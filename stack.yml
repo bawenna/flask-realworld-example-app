@@ -27,7 +27,7 @@ Resources:
           # printf "[Service]\nExecStart=\nExecStart=/usr/bin/dockerd\n" | sudo tee /etc/systemd/system/docker.service.d/override.conf
           sudo systemctl daemon-reload
           sudo systemctl restart docker.service
-   LambdaFunction:
+  LambdaFunction:
     Type: 'AWS::Lambda::Function'
     Properties:
       Runtime: python3.6
@@ -37,8 +37,8 @@ Resources:
       	- LambdaExecutionRole
       	- Arn
       Code:
-   	    S3Bucket: codepipeline-flask-demo
-   	    S3Key: Pipfile
+   	S3Bucket: codepipeline-flask-demo
+   	S3Key: Pipfile
   AppNodeSG:
     Type: AWS::EC2::SecurityGroup
     Properties:
