@@ -37,8 +37,8 @@ Resources:
       	- LambdaExecutionRole
       	- Arn
       Code:
-        S3Bucket: !Ref buildBucketName
-        S3Key: !Ref buildObjectKey
+   	    S3Bucket: codepipeline-flask-demo
+   	    S3Key: Pipfile
   AppNodeSG:
     Type: AWS::EC2::SecurityGroup
     Properties:
