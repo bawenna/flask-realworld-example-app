@@ -34,11 +34,11 @@ Resources:
       Handler: main.lamda_handler
       Timeout: '10'
       Role: !GetAtt
-      	- LambdaExecutionRole
-      	- Arn
+        - LambdaExecutionRole
+        - Arn
       Code:
-   	S3Bucket: codepipeline-flask-demo
-   	S3Key: Pipfile
+        S3Bucket: codepipeline-flask-demo
+        S3Key: Pipfile
   AppNodeSG:
     Type: AWS::EC2::SecurityGroup
     Properties:
